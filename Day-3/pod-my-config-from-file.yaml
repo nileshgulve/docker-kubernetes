@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: podmyconfig
+  name: podmyconfig
+spec:
+  containers:
+  - image: nginx
+    name: podmyconfig
+    volumeMounts:
+      - name: config
+        mountPath: "/etc/conf"
+  volumes:
+    - name: config
+      configMap:
+        name: myconfig

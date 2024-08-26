@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: podtoleration
+  name: podtoleration
+spec:
+  containers:
+  - image: nginx
+    name: podtoleration
+  tolerations:
+  - key: "T1"
+    operator: "Equal"
+    value: "value1"
+    effect: "PreferNoSchedule"
+

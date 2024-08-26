@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  conf.yaml: |
+    city: Pune
+    state: MH
+    Pincode: 411027
+    conutry: IN
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: myconfig

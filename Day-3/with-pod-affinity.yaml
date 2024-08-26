@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-pod-affinity
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd
+        topologyKey: kubernetes.io/arch
+  containers:
+  - name: with-pod-affinity
+    image: nginx
