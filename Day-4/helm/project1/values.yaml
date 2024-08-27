@@ -1,0 +1,7 @@
+replicaCount: 3
+service:
+  port: 80
+  type: NodePort
+image:
+  name: nginx
+  tag: 1.26.2

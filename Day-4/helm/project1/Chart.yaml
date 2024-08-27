@@ -1,0 +1,5 @@
+aptVersion: v1
+name: my-nginx
+version: 1.1.2
+appVersion: 2.2.3
+description: my first helm chart
